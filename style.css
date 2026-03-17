@@ -252,11 +252,10 @@ header {
 .hero-text h1 span {
     font-size: clamp(3rem, 5vw, 4.5rem);
     font-weight: bolder;
-    /* background-image: linear-gradient(135deg, #FF527B, #B533FF);
+    background-image: linear-gradient(135deg, #00C6FF, #0072FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: inline-block; */
-    color: blue;
+    display: inline-block;
 }
 
 .hero-text p {
