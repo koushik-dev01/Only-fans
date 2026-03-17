@@ -1,4 +1,6 @@
-/* CSS Variables */
+/* ============================== */
+/* CSS VARIABLES & GLOBAL STYLES */
+/* ============================== */
 :root {
     --text-main: #333333;
     --text-light: #666666;
@@ -11,7 +13,6 @@
         #FAFAFA;
 }
 
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -47,7 +48,9 @@ a {
     padding: 0 5%;
 }
 
-/* Buttons */
+/* ============================== */
+/* BUTTONS                        */
+/* ============================== */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -71,18 +74,10 @@ a {
     box-shadow: 0 8px 25px rgba(255, 82, 123, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.2);
 }
 
-.dublicate-btn {
-    display: none;
-    background: linear-gradient(135deg, #FF527B, #B533FF);
-    box-shadow: 0 8px 25px rgba(255, 82, 123, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.2);
-    
-}
-
 .btn-pink:hover {
     box-shadow: 0 12px 30px rgba(255, 82, 123, 0.6), inset 0 2px 0 rgba(255, 255, 255, 0.2);
     transform: translateY(-3px);
     background: linear-gradient(135deg, #FF3D6A, #9F10FF);
-    transition: 0.3s;
 }
 
 .btn-blue {
@@ -94,10 +89,11 @@ a {
     box-shadow: 0 12px 30px rgba(0, 198, 255, 0.6), inset 0 2px 0 rgba(255, 255, 255, 0.2);
     transform: translateY(-3px);
     background: linear-gradient(135deg, #00B4E8, #005EE6);
-    transition: 0.3s;
 }
 
-/* Header */
+/* ============================== */
+/* HEADER & NAVIGATION            */
+/* ============================== */
 header {
     position: fixed;
     top: 0;
@@ -127,6 +123,8 @@ header {
 
 .logo {
     width: 60px;
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
@@ -146,6 +144,20 @@ header {
     padding-left: 20px;
 }
 
+.header-contact .insta {
+    transition: 0.3s;
+}
+
+.header-contact .insta:hover {
+    color: #FF527B;
+}
+
+.header-nav-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .nav-links {
     display: flex;
     align-items: center;
@@ -158,6 +170,10 @@ header {
 .nav-links a:hover {
     color: #FF527B;
     transition: 0.3s;
+}
+
+.mobile-header-actions {
+    display: none;
 }
 
 /* Animated Hamburger Menu */
@@ -185,18 +201,19 @@ header {
 }
 
 .mobile-menu-btn .bar:nth-child(2) {
-    top: 8px;
+    top: 8.5px;
     width: 70%;
 }
 
 .mobile-menu-btn .bar:nth-child(3) {
-    top: 16px;
+    top: 17px;
 }
 
 .mobile-menu-btn.active .bar:nth-child(1) {
     top: 8.5px;
     transform: rotate(45deg);
     background-color: #FF527B;
+    width: 100%;
 }
 
 .mobile-menu-btn.active .bar:nth-child(2) {
@@ -210,7 +227,9 @@ header {
     background-color: #FF527B;
 }
 
-/* Hero Section */
+/* ============================== */
+/* HERO SECTION                   */
+/* ============================== */
 #home {
     padding-top: 170px;
     position: relative;
@@ -228,6 +247,15 @@ header {
     font-size: clamp(2.5rem, 4.5vw, 4rem);
     line-height: 1.15;
     margin-bottom: 25px;
+}
+
+.hero-text h1 span {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: bolder;
+    background-image: linear-gradient(135deg, #FF527B, #B533FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 .hero-text p {
@@ -299,7 +327,9 @@ header {
     fill: rgba(255, 255, 255, 0.8);
 }
 
-/* Highlighted Icons */
+/* ============================== */
+/* TRUST SECTION                  */
+/* ============================== */
 .trust-icon {
     font-size: 26px;
     margin-bottom: 20px;
@@ -329,7 +359,6 @@ header {
     box-shadow: 0 10px 25px rgba(0, 225, 217, 0.4);
 }
 
-/* Trust Section */
 #trust {
     padding: 40px 0 80px;
     position: relative;
@@ -355,7 +384,6 @@ header {
 
 .trust-card:hover {
     transform: translateY(-8px);
-    transition: 0.3s;
 }
 
 .trust-card h3 {
@@ -368,7 +396,9 @@ header {
     color: var(--text-light);
 }
 
-/* Performance Section - Glassmorphism Redesign */
+/* ============================== */
+/* PERFORMANCE SECTION            */
+/* ============================== */
 #performance {
     padding: 100px 0;
     background: var(--white);
@@ -402,11 +432,10 @@ header {
     pointer-events: none;
 }
 
-.perf-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 70px;
-    align-items: center;
+.perf-container-centered {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
     position: relative;
     z-index: 2;
 }
@@ -427,176 +456,9 @@ header {
     border: 1px solid rgba(255, 82, 123, 0.2);
 }
 
-.perf-text-modern h2 {
-    font-size: clamp(2rem, 3.5vw, 3.2rem);
-    line-height: 1.15;
-    margin-bottom: 25px;
-    color: var(--text-main);
-}
-
-.perf-text-modern p {
-    color: var(--text-light);
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    line-height: 1.7;
-}
-
-.chart-modern-wrapper {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    border-radius: 30px;
-    padding: 45px 40px;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.8);
-    position: relative;
-}
-
-.chart-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 40px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    padding-bottom: 20px;
-}
-
-.chart-header h3 {
-    font-size: 1.8rem;
-    margin: 0;
-}
-
-.chart-header .trend {
-    color: #00C6FF;
-    font-weight: 600;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(0, 198, 255, 0.1);
-    padding: 6px 12px;
-    border-radius: 20px;
-}
-
-.horizontal-chart {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.h-bar-row {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.h-year {
-    min-width: 50px;
-    font-weight: 600;
-    color: var(--text-light);
-    font-size: 0.95rem;
-}
-
-.h-track {
-    flex-grow: 1;
-    height: 16px;
-    background: rgba(0, 0, 0, 0.04);
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
-}
-
-.h-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #FF527B, #B533FF);
-    border-radius: 20px;
-    position: relative;
-    transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1);
-    box-shadow: 0 0 15px rgba(255, 82, 123, 0.4);
-}
-
-.h-bar-row:nth-child(1) .h-fill {
-    background: linear-gradient(90deg, #A8E6E9, #68C1C7);
-    box-shadow: 0 0 10px rgba(104, 193, 199, 0.4);
-}
-
-.h-bar-row:nth-child(2) .h-fill {
-    background: linear-gradient(90deg, #90CAF9, #00C6FF);
-    box-shadow: 0 0 10px rgba(0, 198, 255, 0.4);
-}
-
-.h-bar-row:nth-child(3) .h-fill {
-    background: linear-gradient(90deg, #D1C4E9, #B533FF);
-    box-shadow: 0 0 10px rgba(181, 51, 255, 0.4);
-}
-
-.h-value {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff;
-    font-weight: 700;
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
-}
-
-.floating-stat {
-    position: absolute;
-    bottom: -25px;
-    right: -20px;
-    background: #fff;
-    padding: 15px 25px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border: 1px solid #f0f0f0;
-    animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-.stat-icon {
-    background: rgba(255, 82, 123, 0.1);
-    color: #FF527B;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-}
-
-.stat-text h4 {
-    font-size: 1.2rem;
-    margin: 0;
-    color: var(--text-main);
-}
-
-.stat-text p {
-    font-size: 0.8rem;
-    margin: 0;
-    color: var(--text-light);
-    font-weight: 500;
-}
-
-/* Services Section */
+/* ============================== */
+/* SERVICES SECTION               */
+/* ============================== */
 #services {
     padding: 100px 0;
     background: var(--bg-dreamy);
@@ -642,7 +504,6 @@ header {
     transform: translateY(-8px);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
     background: #fff;
-    transition: 0.3s;
 }
 
 .service-card h3 {
@@ -656,7 +517,9 @@ header {
     line-height: 1.6;
 }
 
-/* 3-Card Center Animation Testimonials Slider */
+/* ============================== */
+/* TESTIMONIALS SECTION           */
+/* ============================== */
 #testimonials {
     padding: 100px 0;
     background: #fff;
@@ -783,7 +646,6 @@ header {
     box-shadow: 0 10px 25px rgba(255, 82, 123, 0.4);
     transform: translateY(-3px);
     border: none;
-    transition: 0.3s;
 }
 
 .slider-dots {
@@ -806,7 +668,9 @@ header {
     border-radius: 10px;
 }
 
-/* How To Join Section */
+/* ============================== */
+/* HOW TO JOIN SECTION            */
+/* ============================== */
 #process {
     padding: 100px 0;
     background: var(--bg-dreamy);
@@ -833,7 +697,6 @@ header {
 .process-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
 }
 
 .process-number {
@@ -859,7 +722,9 @@ header {
     line-height: 1.5;
 }
 
-/* FAQ Section */
+/* ============================== */
+/* FAQ SECTION                    */
+/* ============================== */
 #faq {
     padding: 100px 0;
     background: #fff;
@@ -885,7 +750,6 @@ header {
     border-color: rgba(255, 82, 123, 0.4);
     box-shadow: 0 15px 30px rgba(255, 82, 123, 0.05);
     background: #fff;
-    transition: 0.3s;
 }
 
 .faq-question {
@@ -924,7 +788,9 @@ header {
     transform: rotate(45deg);
 }
 
-/* Application Form */
+/* ============================== */
+/* APPLICATION FORM               */
+/* ============================== */
 #apply {
     padding: 120px 0;
     background: var(--bg-dreamy);
@@ -1016,7 +882,9 @@ header {
     user-select: none;
 }
 
-/* Footer */
+/* ============================== */
+/* FOOTER                         */
+/* ============================== */
 footer {
     background: #fff;
     padding: 80px 0 40px;

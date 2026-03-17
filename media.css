@@ -1,4 +1,3 @@
-/* Mobile Adjustments */
 @media (max-width: 992px) {
     .header-contact {
         display: none;
@@ -9,14 +8,7 @@
         text-align: center;
     }
 
-    .perf-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .hero-text p,
-    .perf-text p {
+    .hero-text p {
         margin: 0 auto 30px;
     }
 
@@ -35,24 +27,37 @@
         max-width: 50%;
     }
 
-    .floating-stat {
-        display: none;
-    }
-
-    .dublicate-btn{
-        display: inline-block;
-        margin: 0px !important;
-    }
-
-    .btn-pink{
-        display: none;
+    .btn-pink.dublicate-btn {
+        display: none !important;
     }
 }
 
-/* Mobile Perfect Breakpoint */
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: flex;
+    }
+
+    /* Mobile Header Buttons (Insta + Apply) */
+    .mobile-header-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-right: 15px;
+        /* Adds space before hamburger */
+    }
+
+    .mobile-insta-btn {
+        color: #FF527B;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-apply-btn {
+        padding: 6px 14px;
+        font-size: 12px;
+        height: 34px;
     }
 
     /* Animated Dropdown Menu */
@@ -68,7 +73,6 @@
         padding: 30px 0;
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         border-top: 1px solid rgba(0, 0, 0, 0.05);
-
         opacity: 0;
         visibility: hidden;
         transform: translateY(-20px);
@@ -119,6 +123,7 @@
         transition-delay: 0.3s;
     }
 
+    /* Scaling down layouts */
     #home {
         padding-top: 120px;
     }
@@ -140,8 +145,8 @@
         width: 40px;
     }
 
-    .check-list{
-        grid-template-columns: 1fr 1fr ;
+    .check-list {
+        grid-template-columns: 1fr 1fr;
     }
 
     .form-row {
@@ -161,34 +166,8 @@
         padding: 30px 20px;
     }
 
-    .chart-modern-wrapper {
-        padding: 25px 15px;
-        border-radius: 20px;
-    }
-
-    .chart-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        margin-bottom: 25px;
-        padding-bottom: 15px;
-    }
-
-    .chart-header h3 {
-        font-size: 1.4rem;
-    }
-
-    .h-year {
-        min-width: 40px;
-        font-size: 0.85rem;
-    }
-
-    .h-value {
-        font-size: 0.7rem;
-        right: 8px;
-    }
-
-    .perf-text-modern h2 {
+    /* Performance Center Text Mobile */
+    .perf-container-centered h2 {
         font-size: 1.8rem;
     }
 
@@ -259,14 +238,14 @@
     }
 }
 
-@media (max-width: 480px){
-    .hero-buttons{
+@media (max-width: 480px) {
+    .hero-buttons {
         flex-direction: column;
     }
 }
 
-@media (max-width: 350px){
-    .check-list{
+@media (max-width: 350px) {
+    .check-list {
         grid-template-columns: 1fr;
     }
 }
